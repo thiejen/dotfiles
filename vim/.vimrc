@@ -26,7 +26,7 @@ Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
-" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
