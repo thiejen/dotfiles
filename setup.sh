@@ -74,3 +74,13 @@ echo 'export LC_ALL=en_US.UTF-8' >> ~/.zshrc
 
 source ~/.zshrc
 vim +silent +PlugInstall +qall
+
+
+echo "\n\n============DOCKER============\n\n"
+
+brew install docker docker-machine
+brew install virtualbox
+
+docker-machine create --driver virtualbox default
+
+eval $(docker-machine env default)

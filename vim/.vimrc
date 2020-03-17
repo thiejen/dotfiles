@@ -66,7 +66,6 @@ Plug 'yuttie/comfortable-motion.vim'
 Plug 'andrewradev/splitjoin.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'jlanzarotta/bufexplorer'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'  }
 
 " == Python ==
 Plug 'tweekmonster/django-plus.vim'
@@ -110,6 +109,7 @@ Plug 'mattn/vim-sqlfmt'
 
 Plug 'jebaum/vim-tmuxify'
 
+Plug 'fatih/vim-go', { 'tag': 'v1.22', 'do': ':GoUpdateBinaries'  }
 call plug#end()
 
 " == config ==
@@ -356,3 +356,16 @@ nnoremap <leader>- :exe "vertical resize -10"<CR>
 "  <Leader>bs   or   :BufExplorerHorizontalSplit   or   Your custom key mapping
 " To start exploring in a newly split vertical window, use: >
 "  <Leader>bv   or   :BufExplorerVerticalSplit   or   Your custom key mapping
+
+
+function! ToTheme()
+  echo 'In theme'
+  let _background = &background
+  if _background == 'light'
+    set background=dark
+  elseif _background == 'dark'
+    set background=light
+  endif
+endfunction
+
+nnoremap <leader>C :call ToTheme()<cr>
