@@ -1,0 +1,7 @@
+# =====================
+# ================= GRUVBOX COLOR =============================
+source ~/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh
+
+# ================= ALIAS =============================
+alias ytmp4="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' "
+alias ytmp3="youtube-dl -x --audio-format mp3 --audio-quality 0 "
