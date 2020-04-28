@@ -9,7 +9,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
 
 " Multiple Plug commands can be written in a single line using | separators
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree'
@@ -101,7 +101,12 @@ Plug 'tkhren/vim-fake'
 Plug 'tpope/vim-abolish'
 Plug 'chrisbra/csv.vim'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'vim-syntastic/syntastic'
+
+
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
+
 
 Plug 'morhetz/gruvbox'
 Plug 'mattn/vim-sqlfmt'
@@ -176,6 +181,8 @@ set splitbelow
 " Disable auto new line (wrap)
 set tw=0
 
+" enables us to navigate away from a modified file without first saving it
+set hidden
 
 " ===== NERDTree =====
 map <silent> <leader>n :NERDTreeToggle<CR>
@@ -296,6 +303,7 @@ noremap <C-s> :shell<CR>
 
 let g:AutoPairsMapCh = 0
 set backupcopy=yes
+set nowritebackup
 
 noremap <leader>bdp Obinding.pry<esc>:w<cr>
 
@@ -325,6 +333,8 @@ map <leader>S :RunSpecLine<cr>
 " [e ]e
 " Bubble multiple lines
 " [egv ]egv
+" Better display for messages
+set cmdheight=2
 
 set textwidth=120
 
